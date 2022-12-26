@@ -17,6 +17,8 @@
 		0AE98C4B294DDE2700ED65C9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE98C4A294DDE2700ED65C9 /* SecondViewController.swift */; };
 		0AE98C4D294DDE5E00ED65C9 /* SecondViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE98C4C294DDE5E00ED65C9 /* SecondViewController.storyboard */; };
 		0AE98C4F294DDE8900ED65C9 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE98C4E294DDE8900ED65C9 /* DefaultViewController.swift */; };
+		83A4402329595E950007B5D5 /* AsyncCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4402229595E950007B5D5 /* AsyncCollectionViewController.swift */; };
+		83A440252959785A0007B5D5 /* AsyncCollectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A440242959785A0007B5D5 /* AsyncCollectionHandler.swift */; };
 		83ABA2C6294FF2E600A2EC18 /* ThirdViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA2C5294FF2E600A2EC18 /* ThirdViewController.storyboard */; };
 		83ABA2C8294FF2F200A2EC18 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABA2C7294FF2F200A2EC18 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 		0AE98C4A294DDE2700ED65C9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0AE98C4C294DDE5E00ED65C9 /* SecondViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondViewController.storyboard; sourceTree = "<group>"; };
 		0AE98C4E294DDE8900ED65C9 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
+		83A4402229595E950007B5D5 /* AsyncCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCollectionViewController.swift; sourceTree = "<group>"; };
+		83A440242959785A0007B5D5 /* AsyncCollectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCollectionHandler.swift; sourceTree = "<group>"; };
 		83ABA2C5294FF2E600A2EC18 /* ThirdViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdViewController.storyboard; sourceTree = "<group>"; };
 		83ABA2C7294FF2F200A2EC18 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +75,7 @@
 				0AE98C33294DD95B00ED65C9 /* AppDelegate.swift */,
 				0AE98C35294DD95B00ED65C9 /* SceneDelegate.swift */,
 				0AE98C49294DDBB900ED65C9 /* MPSNavigationController */,
+				83A4402129595E7E0007B5D5 /* AsyncCollectionViewController */,
 				0AE98C3C294DD95D00ED65C9 /* Assets.xcassets */,
 				0AE98C3E294DD95D00ED65C9 /* LaunchScreen.storyboard */,
 				0AE98C41294DD95D00ED65C9 /* Info.plist */,
@@ -91,6 +96,15 @@
 				83ABA2C5294FF2E600A2EC18 /* ThirdViewController.storyboard */,
 			);
 			path = MPSNavigationController;
+			sourceTree = "<group>";
+		};
+		83A4402129595E7E0007B5D5 /* AsyncCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				83A4402229595E950007B5D5 /* AsyncCollectionViewController.swift */,
+				83A440242959785A0007B5D5 /* AsyncCollectionHandler.swift */,
+			);
+			path = AsyncCollectionViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AE98C4F294DDE8900ED65C9 /* DefaultViewController.swift in Sources */,
+				83A4402329595E950007B5D5 /* AsyncCollectionViewController.swift in Sources */,
+				83A440252959785A0007B5D5 /* AsyncCollectionHandler.swift in Sources */,
 				0AE98C48294DD9F400ED65C9 /* BaseNavigationController.swift in Sources */,
 				0AE98C38294DD95B00ED65C9 /* ViewController.swift in Sources */,
 				83ABA2C8294FF2F200A2EC18 /* ThirdViewController.swift in Sources */,
