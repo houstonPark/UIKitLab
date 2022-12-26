@@ -51,3 +51,13 @@ open class AsyncCollectionViewController: UICollectionViewController {
         Task { await self.asyncHandler.taskOfViewState(viewControllerDisplayState: .didDisappear) }
     }
 }
+
+extension AsyncCollectionViewController: UICollectionViewDataSourcePrefetching {
+    public func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
+        
+    }
+}
