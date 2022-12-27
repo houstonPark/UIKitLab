@@ -19,6 +19,13 @@
 		0AE98C4F294DDE8900ED65C9 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE98C4E294DDE8900ED65C9 /* DefaultViewController.swift */; };
 		83ABA2C6294FF2E600A2EC18 /* ThirdViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA2C5294FF2E600A2EC18 /* ThirdViewController.storyboard */; };
 		83ABA2C8294FF2F200A2EC18 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABA2C7294FF2F200A2EC18 /* ThirdViewController.swift */; };
+		83EFA31B295A78F500252575 /* LegoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFA31A295A78F500252575 /* LegoCollectionViewController.swift */; };
+		83EFA31D295A791400252575 /* LegoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFA31C295A791400252575 /* LegoCollectionViewCell.swift */; };
+		83EFA31F295A798900252575 /* LegoCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFA31E295A798900252575 /* LegoCollectionViewCellDelegate.swift */; };
+		83EFA321295A7BB200252575 /* LegoCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFA320295A7BB200252575 /* LegoCollectionViewModel.swift */; };
+		83EFA323295A7CED00252575 /* LegoCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EFA322295A7CED00252575 /* LegoCollectionViewController.storyboard */; };
+		83EFA325295A8DB200252575 /* LegoCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFA324295A8DB200252575 /* LegoCollectionModel.swift */; };
+		83EFA327295A8F0700252575 /* LegoCollectionSupplymentaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFA326295A8F0700252575 /* LegoCollectionSupplymentaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		0AE98C4E294DDE8900ED65C9 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		83ABA2C5294FF2E600A2EC18 /* ThirdViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdViewController.storyboard; sourceTree = "<group>"; };
 		83ABA2C7294FF2F200A2EC18 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		83EFA31A295A78F500252575 /* LegoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCollectionViewController.swift; sourceTree = "<group>"; };
+		83EFA31C295A791400252575 /* LegoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCollectionViewCell.swift; sourceTree = "<group>"; };
+		83EFA31E295A798900252575 /* LegoCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
+		83EFA320295A7BB200252575 /* LegoCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCollectionViewModel.swift; sourceTree = "<group>"; };
+		83EFA322295A7CED00252575 /* LegoCollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LegoCollectionViewController.storyboard; sourceTree = "<group>"; };
+		83EFA324295A8DB200252575 /* LegoCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCollectionModel.swift; sourceTree = "<group>"; };
+		83EFA326295A8F0700252575 /* LegoCollectionSupplymentaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCollectionSupplymentaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,7 @@
 				0AE98C33294DD95B00ED65C9 /* AppDelegate.swift */,
 				0AE98C35294DD95B00ED65C9 /* SceneDelegate.swift */,
 				0AE98C49294DDBB900ED65C9 /* MPSNavigationController */,
+				83EFA319295A78DC00252575 /* LegoCollectionViewController */,
 				0AE98C3C294DD95D00ED65C9 /* Assets.xcassets */,
 				0AE98C3E294DD95D00ED65C9 /* LaunchScreen.storyboard */,
 				0AE98C41294DD95D00ED65C9 /* Info.plist */,
@@ -91,6 +106,20 @@
 				83ABA2C5294FF2E600A2EC18 /* ThirdViewController.storyboard */,
 			);
 			path = MPSNavigationController;
+			sourceTree = "<group>";
+		};
+		83EFA319295A78DC00252575 /* LegoCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				83EFA31A295A78F500252575 /* LegoCollectionViewController.swift */,
+				83EFA322295A7CED00252575 /* LegoCollectionViewController.storyboard */,
+				83EFA31C295A791400252575 /* LegoCollectionViewCell.swift */,
+				83EFA326295A8F0700252575 /* LegoCollectionSupplymentaryView.swift */,
+				83EFA320295A7BB200252575 /* LegoCollectionViewModel.swift */,
+				83EFA31E295A798900252575 /* LegoCollectionViewCellDelegate.swift */,
+				83EFA324295A8DB200252575 /* LegoCollectionModel.swift */,
+			);
+			path = LegoCollectionViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +184,7 @@
 				0AE98C40294DD95D00ED65C9 /* LaunchScreen.storyboard in Resources */,
 				0AE98C4D294DDE5E00ED65C9 /* SecondViewController.storyboard in Resources */,
 				0AE98C3D294DD95D00ED65C9 /* Assets.xcassets in Resources */,
+				83EFA323295A7CED00252575 /* LegoCollectionViewController.storyboard in Resources */,
 				0AE98C3B294DD95B00ED65C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,9 +199,15 @@
 				0AE98C4F294DDE8900ED65C9 /* DefaultViewController.swift in Sources */,
 				0AE98C48294DD9F400ED65C9 /* BaseNavigationController.swift in Sources */,
 				0AE98C38294DD95B00ED65C9 /* ViewController.swift in Sources */,
+				83EFA31B295A78F500252575 /* LegoCollectionViewController.swift in Sources */,
+				83EFA325295A8DB200252575 /* LegoCollectionModel.swift in Sources */,
 				83ABA2C8294FF2F200A2EC18 /* ThirdViewController.swift in Sources */,
+				83EFA327295A8F0700252575 /* LegoCollectionSupplymentaryView.swift in Sources */,
 				0AE98C34294DD95B00ED65C9 /* AppDelegate.swift in Sources */,
+				83EFA31F295A798900252575 /* LegoCollectionViewCellDelegate.swift in Sources */,
+				83EFA31D295A791400252575 /* LegoCollectionViewCell.swift in Sources */,
 				0AE98C4B294DDE2700ED65C9 /* SecondViewController.swift in Sources */,
+				83EFA321295A7BB200252575 /* LegoCollectionViewModel.swift in Sources */,
 				0AE98C36294DD95B00ED65C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
