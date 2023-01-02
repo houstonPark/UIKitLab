@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class LegoCellItem: Hashable {
 
@@ -29,7 +30,7 @@ public class LegoCellItem: Hashable {
     }
 }
 
-public class LegoSupplymenatryItem: Hashable {
+public class LegoSupplemenatryItem: Hashable {
 
     public let id: UUID = UUID()
     public var index: Int
@@ -46,7 +47,7 @@ public class LegoSupplymenatryItem: Hashable {
         self.supplymentaryViewType = supplymentaryViewType
     }
 
-    public static func == (lhs: LegoSupplymenatryItem, rhs: LegoSupplymenatryItem) -> Bool {
+    public static func == (lhs: LegoSupplemenatryItem, rhs: LegoSupplemenatryItem) -> Bool {
         lhs.index == rhs.index
     }
 
@@ -59,11 +60,13 @@ public class LegoSupplymenatryItem: Hashable {
 public class LegoSection: Hashable {
 
     public var identifier: UUID = UUID()
-    public var supplymentaryItem: LegoSupplymenatryItem
+    public var sectionHeaderItem: LegoSupplemenatryItem?
+    public var sectionFooterItem: LegoSupplemenatryItem?
     public var sectionCellItems: [LegoCellItem]
 
-    init(supplymentaryItem: LegoSupplymenatryItem, sectionCellItems: [LegoCellItem]) {
-        self.supplymentaryItem = supplymentaryItem
+    init(sectionHeaderItem: LegoSupplemenatryItem? = nil, sectionFooterItem: LegoSupplemenatryItem? = nil, sectionCellItems: [LegoCellItem]) {
+        self.sectionHeaderItem = sectionHeaderItem
+        self.sectionFooterItem = sectionFooterItem
         self.sectionCellItems = sectionCellItems
     }
 
@@ -79,32 +82,36 @@ public class LegoSection: Hashable {
 ///List Style Section
 public class LegoVStackSection: LegoSection {
 
-    public let sectionWidth: CGFloat
+    public let cellHeight: CGFloat
+    public let cellInsets: NSDirectionalEdgeInsets
 
-    init(supplymentaryItem: LegoSupplymenatryItem, sectionCellItems: [LegoCellItem], sectionWidth: CGFloat) {
-        self.sectionWidth = sectionWidth
-        super.init(supplymentaryItem: supplymentaryItem, sectionCellItems: sectionCellItems)
+    init(sectionHeaderItem: LegoSupplemenatryItem? = nil, sectionFooterItem: LegoSupplemenatryItem? = nil, sectionCellItems: [LegoCellItem], cellHeight: CGFloat, cellInsets: NSDirectionalEdgeInsets) {
+        self.cellHeight = cellHeight
+        self.cellInsets = cellInsets
+        super.init(sectionHeaderItem: sectionHeaderItem, sectionFooterItem: sectionFooterItem, sectionCellItems: sectionCellItems)
     }
 }
 
 ///Horizontal Carousel Style Section
 public class LegoHStackSection: LegoSection {
-    public let sectionHeight: CGFloat
+    public let cellWidth: CGFloat
+    public let cellInsets: NSDirectionalEdgeInsets
 
-    init(supplymentaryItem: LegoSupplymenatryItem, sectionCellItems: [LegoCellItem], sectionHeight: CGFloat) {
-        self.sectionHeight = sectionHeight
-        super.init(supplymentaryItem: supplymentaryItem, sectionCellItems: sectionCellItems)
+    init(sectionHeaderItem: LegoSupplemenatryItem? = nil, sectionFooterItem: LegoSupplemenatryItem? = nil, sectionCellItems: [LegoCellItem], cellWidth: CGFloat, cellInsets: NSDirectionalEdgeInsets) {
+        self.cellWidth = cellWidth
+        self.cellInsets = cellInsets
+        super.init(sectionHeaderItem: sectionHeaderItem, sectionFooterItem: sectionFooterItem, sectionCellItems: sectionCellItems)
     }
 }
 
 ///Grid Tile Style Section
 public class LegoGridSection: LegoSection {
     public let numberOfItemsInRow: Int
-    public let interItemSpace: (vertical: CGFloat, horizontal: CGFloat)
+    public let cellInsets: NSDirectionalEdgeInsets
 
-    init(supplymentaryItem: LegoSupplymenatryItem, sectionCellItems: [LegoCellItem], numberOfItemsInRow: Int, interItemSpace: (vertical: CGFloat, horizontal: CGFloat) = (20, 20)) {
-        self.interItemSpace = interItemSpace
+    init(sectionHeaderItem: LegoSupplemenatryItem? = nil, sectionFooterItem: LegoSupplemenatryItem? = nil, sectionCellItems: [LegoCellItem], numberOfItemsInRow: Int, cellInsets: NSDirectionalEdgeInsets) {
+        self.cellInsets = cellInsets
         self.numberOfItemsInRow = numberOfItemsInRow
-        super.init(supplymentaryItem: supplymentaryItem, sectionCellItems: sectionCellItems)
+        super.init(sectionHeaderItem: sectionHeaderItem, sectionFooterItem: sectionFooterItem, sectionCellItems: sectionCellItems)
     }
 }

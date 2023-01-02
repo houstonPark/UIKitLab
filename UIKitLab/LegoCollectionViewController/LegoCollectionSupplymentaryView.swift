@@ -13,7 +13,7 @@ open class LegoCollectionSupplymentaryView: UICollectionReusableView, LegoCollec
         String(describing: self)
     }
 
-    public func collectionSupplymentaryView(_ viewController: UIViewController, kind: String, configure data: LegoSupplymenatryItem) {
+    public func collectionSupplymentaryView(_ viewController: UIViewController, kind: String, configure data: LegoSupplemenatryItem) {
 
     }
 }

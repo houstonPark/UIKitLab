@@ -22,19 +22,53 @@ open class LegoCollectionViewModel {
 
     open func registerCells(_ collectionView: UICollectionView) {
         sections.value.forEach { section in
-            let kind = section.supplymentaryItem.kind
-            let type = section.supplymentaryItem.supplymentaryViewType
-            let identifier = type.identifier
-            collectionView.register(section.supplymentaryItem.supplymentaryViewType, forSupplementaryViewOfKind: kind, withReuseIdentifier: identifier)
+            var sectionSupplementaryItems: [LegoSupplemenatryItem] = []
+            if let sectionHeader = section.sectionHeaderItem { sectionSupplementaryItems.append(sectionHeader) }
+            if let sectionFooter = section.sectionFooterItem { sectionSupplementaryItems.append(sectionFooter) }
+            sectionSupplementaryItems.forEach { supplementaryItem in
+                let kind = supplementaryItem.kind
+                let type = supplementaryItem.supplymentaryViewType
+                let identifier = type.identifier
+                collectionView.register(type, forSupplementaryViewOfKind: kind, withReuseIdentifier: identifier)
+            }
             section.sectionCellItems.forEach { cell in
                 let cellType = cell.cellType
                 let cellIdentifier = cellType.identifier
-                collectionView.register(cell.cellType, forCellWithReuseIdentifier: cellIdentifier)
+                collectionView.register(cellType, forCellWithReuseIdentifier: cellIdentifier)
             }
         }
     }
 
+    open func setCompositionalLayoutConfiguration() -> UICollectionViewCompositionalLayoutConfiguration {
+        return UICollectionViewCompositionalLayoutConfiguration()
+    }
+
     open func setCompositionalLayout() -> UICollectionViewCompositionalLayout {
-        
+        let configuration = setCompositionalLayoutConfiguration()
+        let layout = UICollectionViewCompositionalLayout(sectionProvider: { [weak self] sectionIndex, environment in
+            guard let this = self,
+                  this.sections.value.count > sectionIndex else {
+                return nil
+            }
+            let legoSection = this.sections.value[sectionIndex]
+
+            //VStack Section
+            if let vStackSection = legoSection as? LegoVStackSection {
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(vStackSection.cellHeight))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = vStackSection.cellInsets
+                let groupSize = itemSize
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+                let section = NSCollectionLayoutSection(group: group)
+                return section
+            }
+
+            if let hStackSection = legoSection as? LegoHStackSection {
+                
+            }
+
+            return nil
+        }, configuration: configuration)
+        return layout
     }
 }

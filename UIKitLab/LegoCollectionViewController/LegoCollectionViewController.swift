@@ -10,7 +10,7 @@ import Combine
 
 open class LegoCollectionViewController: UICollectionViewController {
 
-    private var dataSource: UICollectionViewDiffableDataSource<LegoSupplymenatryItem, LegoCellItem>? = nil
+    private var dataSource: UICollectionViewDiffableDataSource<LegoSupplemenatryItem, LegoCellItem>? = nil
 
     static let identifier: String = String(describing: LegoCollectionViewController.self)
 
@@ -47,14 +47,14 @@ open class LegoCollectionViewController: UICollectionViewController {
     }
 
     private func setDiffableDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<LegoSupplymenatryItem, LegoCellItem>(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+        dataSource = UICollectionViewDiffableDataSource<LegoSupplemenatryItem, LegoCellItem>(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: itemIdentifier.cellType.identifier, for: indexPath) as? LegoCollectionViewCell
             cell?.collectionViewCell(self, configure: itemIdentifier)
             return cell
         })
         dataSource?.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
             guard let this = self,
-                  let item = self?.viewModel.sections.value[indexPath.section].supplymentaryItem else { return UICollectionReusableView() }
+                  let item = self?.viewModel.sections.value[indexPath.section].sectionHeaderItem else { return UICollectionReusableView() }
             let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: item.supplymentaryViewType.identifier, for: indexPath) as? LegoCollectionSupplymentaryView
 
             supplementaryView?.collectionSupplymentaryView(this, kind: kind, configure: item)

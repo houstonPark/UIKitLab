@@ -16,5 +16,5 @@ public protocol LegoCollectionViewCellDelegate: NSObject {
 
 public protocol LegoCollectionSupplymentaryViewDelegate: NSObject {
 
-    func collectionSupplymentaryView(_ viewController: UIViewController, kind: String, configure data: LegoSupplymenatryItem)
+    func collectionSupplymentaryView(_ viewController: UIViewController, kind: String, configure data: LegoSupplemenatryItem)
 }
