@@ -14,7 +14,11 @@ protocol LegoBlockCellProtocol {
 }
 
 open class LegoBlockCell<LegoData>: UICollectionViewCell, LegoBlockCellProtocol where LegoData: LegoBlockData {
-
+    
+    static var identifier: String {
+        String(describing: Self.self)
+    }
+    
     open func configureCell(_ data: LegoData) { }
 }
 

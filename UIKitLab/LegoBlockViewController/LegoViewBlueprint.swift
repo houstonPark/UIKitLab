@@ -8,8 +8,12 @@
 import UIKit
 import Combine
 
-public protocol LegoViewBlueprintDelegate {
+public protocol LegoViewBlueprintDelegate: NSObject {
 
+    var topViews: [UIView] { get }
+    
+    var bottomViews: [UIView] { get }
+    
     func initializeLegoBlocks() async
 
     func assembleLegoBlocks() async

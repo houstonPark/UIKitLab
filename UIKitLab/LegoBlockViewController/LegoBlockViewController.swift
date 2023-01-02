@@ -7,14 +7,19 @@
 
 import UIKit
 
-final class LegoBlockViewController: DefaultViewController {
+class LegoBlockViewController: DefaultViewController {
 
     @IBOutlet weak var backgroundVerticalStackView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
 
+    weak var blueprint: LegoViewBlueprintDelegate!
+    
+    
+    
     override func loadView() {
         super.loadView()
-
+        
+        
     }
 
     override func viewDidLoad() {
