@@ -17,8 +17,14 @@
 		0AE98C4B294DDE2700ED65C9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE98C4A294DDE2700ED65C9 /* SecondViewController.swift */; };
 		0AE98C4D294DDE5E00ED65C9 /* SecondViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE98C4C294DDE5E00ED65C9 /* SecondViewController.storyboard */; };
 		0AE98C4F294DDE8900ED65C9 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE98C4E294DDE8900ED65C9 /* DefaultViewController.swift */; };
+		83318392296298080068A3CE /* LegoViewBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83318391296298080068A3CE /* LegoViewBlueprint.swift */; };
+		83318394296299CB0068A3CE /* LegoBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83318393296299CB0068A3CE /* LegoBlockCell.swift */; };
+		83318396296299D50068A3CE /* LegoBlockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83318395296299D50068A3CE /* LegoBlockData.swift */; };
+		8331839829629AA10068A3CE /* LegoBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331839729629AA10068A3CE /* LegoBlock.swift */; };
 		83ABA2C6294FF2E600A2EC18 /* ThirdViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA2C5294FF2E600A2EC18 /* ThirdViewController.storyboard */; };
 		83ABA2C8294FF2F200A2EC18 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABA2C7294FF2F200A2EC18 /* ThirdViewController.swift */; };
+		83B9B81C29629366002B3BE4 /* LegoBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B9B81B29629366002B3BE4 /* LegoBlockViewController.swift */; };
+		83B9B81E2962964A002B3BE4 /* LegoBlockViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B9B81D2962964A002B3BE4 /* LegoBlockViewController.storyboard */; };
 		83EFA31B295A78F500252575 /* LegoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFA31A295A78F500252575 /* LegoCollectionViewController.swift */; };
 		83EFA31D295A791400252575 /* LegoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFA31C295A791400252575 /* LegoCollectionViewCell.swift */; };
 		83EFA31F295A798900252575 /* LegoCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFA31E295A798900252575 /* LegoCollectionViewCellDelegate.swift */; };
@@ -41,8 +47,14 @@
 		0AE98C4A294DDE2700ED65C9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0AE98C4C294DDE5E00ED65C9 /* SecondViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondViewController.storyboard; sourceTree = "<group>"; };
 		0AE98C4E294DDE8900ED65C9 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
+		83318391296298080068A3CE /* LegoViewBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoViewBlueprint.swift; sourceTree = "<group>"; };
+		83318393296299CB0068A3CE /* LegoBlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoBlockCell.swift; sourceTree = "<group>"; };
+		83318395296299D50068A3CE /* LegoBlockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoBlockData.swift; sourceTree = "<group>"; };
+		8331839729629AA10068A3CE /* LegoBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoBlock.swift; sourceTree = "<group>"; };
 		83ABA2C5294FF2E600A2EC18 /* ThirdViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdViewController.storyboard; sourceTree = "<group>"; };
 		83ABA2C7294FF2F200A2EC18 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		83B9B81B29629366002B3BE4 /* LegoBlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoBlockViewController.swift; sourceTree = "<group>"; };
+		83B9B81D2962964A002B3BE4 /* LegoBlockViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LegoBlockViewController.storyboard; sourceTree = "<group>"; };
 		83EFA31A295A78F500252575 /* LegoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCollectionViewController.swift; sourceTree = "<group>"; };
 		83EFA31C295A791400252575 /* LegoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCollectionViewCell.swift; sourceTree = "<group>"; };
 		83EFA31E295A798900252575 /* LegoCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +97,8 @@
 				0AE98C33294DD95B00ED65C9 /* AppDelegate.swift */,
 				0AE98C35294DD95B00ED65C9 /* SceneDelegate.swift */,
 				0AE98C49294DDBB900ED65C9 /* MPSNavigationController */,
-				83EFA319295A78DC00252575 /* LegoCollectionViewController */,
+				83B9B81A29629332002B3BE4 /* LegoBlockViewController */,
+				83EFA319295A78DC00252575 /* LegoCollectionViewController_deprecate */,
 				0AE98C3C294DD95D00ED65C9 /* Assets.xcassets */,
 				0AE98C3E294DD95D00ED65C9 /* LaunchScreen.storyboard */,
 				0AE98C41294DD95D00ED65C9 /* Info.plist */,
@@ -108,7 +121,20 @@
 			path = MPSNavigationController;
 			sourceTree = "<group>";
 		};
-		83EFA319295A78DC00252575 /* LegoCollectionViewController */ = {
+		83B9B81A29629332002B3BE4 /* LegoBlockViewController */ = {
+			isa = PBXGroup;
+			children = (
+				83B9B81B29629366002B3BE4 /* LegoBlockViewController.swift */,
+				83318391296298080068A3CE /* LegoViewBlueprint.swift */,
+				8331839729629AA10068A3CE /* LegoBlock.swift */,
+				83318393296299CB0068A3CE /* LegoBlockCell.swift */,
+				83318395296299D50068A3CE /* LegoBlockData.swift */,
+				83B9B81D2962964A002B3BE4 /* LegoBlockViewController.storyboard */,
+			);
+			path = LegoBlockViewController;
+			sourceTree = "<group>";
+		};
+		83EFA319295A78DC00252575 /* LegoCollectionViewController_deprecate */ = {
 			isa = PBXGroup;
 			children = (
 				83EFA31A295A78F500252575 /* LegoCollectionViewController.swift */,
@@ -119,7 +145,7 @@
 				83EFA31E295A798900252575 /* LegoCollectionViewCellDelegate.swift */,
 				83EFA324295A8DB200252575 /* LegoCollectionModel.swift */,
 			);
-			path = LegoCollectionViewController;
+			path = LegoCollectionViewController_deprecate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83ABA2C6294FF2E600A2EC18 /* ThirdViewController.storyboard in Resources */,
+				83B9B81E2962964A002B3BE4 /* LegoBlockViewController.storyboard in Resources */,
 				0AE98C40294DD95D00ED65C9 /* LaunchScreen.storyboard in Resources */,
 				0AE98C4D294DDE5E00ED65C9 /* SecondViewController.storyboard in Resources */,
 				0AE98C3D294DD95D00ED65C9 /* Assets.xcassets in Resources */,
@@ -196,17 +223,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8331839829629AA10068A3CE /* LegoBlock.swift in Sources */,
+				83318394296299CB0068A3CE /* LegoBlockCell.swift in Sources */,
 				0AE98C4F294DDE8900ED65C9 /* DefaultViewController.swift in Sources */,
+				83B9B81C29629366002B3BE4 /* LegoBlockViewController.swift in Sources */,
 				0AE98C48294DD9F400ED65C9 /* BaseNavigationController.swift in Sources */,
 				0AE98C38294DD95B00ED65C9 /* ViewController.swift in Sources */,
 				83EFA31B295A78F500252575 /* LegoCollectionViewController.swift in Sources */,
 				83EFA325295A8DB200252575 /* LegoCollectionModel.swift in Sources */,
+				83318396296299D50068A3CE /* LegoBlockData.swift in Sources */,
 				83ABA2C8294FF2F200A2EC18 /* ThirdViewController.swift in Sources */,
 				83EFA327295A8F0700252575 /* LegoCollectionSupplymentaryView.swift in Sources */,
 				0AE98C34294DD95B00ED65C9 /* AppDelegate.swift in Sources */,
 				83EFA31F295A798900252575 /* LegoCollectionViewCellDelegate.swift in Sources */,
 				83EFA31D295A791400252575 /* LegoCollectionViewCell.swift in Sources */,
 				0AE98C4B294DDE2700ED65C9 /* SecondViewController.swift in Sources */,
+				83318392296298080068A3CE /* LegoViewBlueprint.swift in Sources */,
 				83EFA321295A7BB200252575 /* LegoCollectionViewModel.swift in Sources */,
 				0AE98C36294DD95B00ED65C9 /* SceneDelegate.swift in Sources */,
 			);

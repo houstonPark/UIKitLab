@@ -11,6 +11,8 @@ open class DefaultViewController: UIViewController, NavigationPopDelegate {
 
     public var useCustomNavigationBackAction: Bool = false
 
+    public private(set) var creationInfo: [String: Any]? = nil
+
     static var identifier: String {
         String(describing: self)
     }
@@ -23,6 +25,13 @@ open class DefaultViewController: UIViewController, NavigationPopDelegate {
         } else {
             navigationItem.backButtonTitle = ""
         }
+    }
+
+    static func create(creationInfo: [String: Any]? = nil) -> Self {
+        let storyboard = UIStoryboard(name: Self.identifier, bundle: .main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: Self.identifier) as! Self
+        viewController.creationInfo = creationInfo
+        return viewController
     }
 
     public func navigationController(shouldBegin: @escaping ((Bool) -> ())) {

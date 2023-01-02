@@ -27,23 +27,23 @@ open class LegoCollectionViewController: UICollectionViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         subscribeViewModelDataSource()
-        viewModel.registerCells(collectionView)
+//        viewModel.registerCells(collectionView)
         setDiffableDataSource()
     }
 
     private func subscribeViewModelDataSource() {
-        viewModel.sections
-            .sink { result in
-                switch result {
-                case .failure(let error):
-                    print(error.localizedDescription)
-                case .finished:
-                    break
-                }
-            } receiveValue: { legoSectionItems in
-
-            }
-            .store(in: &cancellable)
+//        viewModel.sections
+//            .sink { result in
+//                switch result {
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                case .finished:
+//                    break
+//                }
+//            } receiveValue: { legoSectionItems in
+//
+//            }
+//            .store(in: &cancellable)
     }
 
     private func setDiffableDataSource() {
@@ -52,15 +52,15 @@ open class LegoCollectionViewController: UICollectionViewController {
             cell?.collectionViewCell(self, configure: itemIdentifier)
             return cell
         })
-        dataSource?.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
-            guard let this = self,
-                  let item = self?.viewModel.sections.value[indexPath.section].sectionHeaderItem else { return UICollectionReusableView() }
-            let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: item.supplymentaryViewType.identifier, for: indexPath) as? LegoCollectionSupplymentaryView
-
-            supplementaryView?.collectionSupplymentaryView(this, kind: kind, configure: item)
-
-            return supplementaryView
-        }
+//        dataSource?.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
+//            guard let this = self,
+//                  let item = self?.viewModel.sections.value[indexPath.section].sectionHeaderItem else { return UICollectionReusableView() }
+//            let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: item.supplymentaryViewType.identifier, for: indexPath) as? LegoCollectionSupplymentaryView
+//
+//            supplementaryView?.collectionSupplymentaryView(this, kind: kind, configure: item)
+//
+//            return supplementaryView
+//        }
     }
 
     private func setCompositionalLayout() {
