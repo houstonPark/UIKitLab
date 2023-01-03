@@ -7,13 +7,16 @@
 
 import UIKit
 
-
 protocol LegoBlockProtocol {
 
     associatedtype LegoData = LegoBlockData
     associatedtype LegoCell = LegoBlockCell<LegoBlockData>
 
     func configureLegoBlock(_ cell: LegoCell, data: LegoData) -> LegoCell
+}
+
+protocol LegoClusterProtocol {
+
 }
 
 class LegoBlock<Cell>: LegoBlockProtocol where Cell: LegoBlockCell<LegoBlockData> {
@@ -24,4 +27,7 @@ class LegoBlock<Cell>: LegoBlockProtocol where Cell: LegoBlockCell<LegoBlockData
     }
 }
 
+class LegoCluster {
 
+
+}
